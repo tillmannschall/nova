@@ -1,0 +1,52 @@
+openapi: 3.0.0
+
+info:
+  title: NOVA 15 Common
+  version: 0.1.0
+  description: |
+    
+  contact:
+    name: NOVA Development Team
+    url: 'https://tillmannschall.github.io/nova/'
+    email: noav@sbb.ch
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+
+paths:
+  # OpenAPI standard requires to define at least 1 operation. This API however seems to be a pure type definition. 
+  # So we define NOP operation here as workaround.
+  /nop:
+    get:
+      operationId: noOperation
+      responses:
+        '200':
+          description: Nothing is the result of nop ;-)
+
+components:
+  schemas:
+    # ch.voev.nova.services.nova.v15.common.Message
+    Message:
+      type: object
+      properties:
+        messageText: 
+          $ref: '#/components/schemas/LocalizedString'
+        messageID: 
+          type: integer
+          format: int32
+      required:
+        - messageID
+    # ch.voev.nova.services.nova.v15.common.LocalizedString
+    LocalizedString:
+      type: object
+      properties:
+        valueDE: 
+          type: string
+        valueFR: 
+          type: string
+        valueIT: 
+          type: string
+        valueEN: 
+          type: string
+
+    

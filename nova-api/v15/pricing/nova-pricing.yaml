@@ -1,0 +1,91 @@
+openapi: 3.0.0
+
+info:
+  title: NOVA 15 Pricing
+  version: 0.1.0
+  description: |
+    
+  contact:
+    name: NOVA Development Team
+    url: 'https://tillmannschall.github.io/nova/'
+    email: noav@sbb.ch
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+
+paths:
+  # PricingService
+  nova/v15/pricing/offers/conncetions:
+    post:
+      operationId: createConnectionOffers
+      responses:
+        '200':
+          description: >- 
+            TODO Please add comment
+          content:  
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfferResponse'
+          
+  nova/v15/pricing/offers/trip-search:
+    post:
+      operationId: createTripSearchOffers
+      responses:
+        '200':
+          description: >- 
+            TODO Please add comment
+          content:  
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfferResponse'
+          
+  nova/v15/pricing/offers/interval-search:
+    post:
+      operationId: createIntervalSearchOffers
+      responses:
+        '200':
+          description: >- 
+            TODO Please add comment
+          content:  
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfferResponse'
+          
+
+
+components:
+  schemas:
+    # ch.voev.nova.services.nova.v15.common.Message
+    Message:
+      type: object
+      properties:
+        messageText: 
+          $ref: '../common/nova-common.yaml#/components/schemas/LocalizedString'
+        messageID: 
+          type: integer
+          format: int32
+      required:
+        - messageID
+    # ch.voev.nova.services.nova.v15.common.LocalizedString
+    LocalizedString:
+      type: object
+      properties:
+        valueDE: 
+          type: string
+        valueFR: 
+          type: string
+        valueIT: 
+          type: string
+        valueEN: 
+          type: string
+    # ch.voev.nova.services.nova.v15.pricing.OfferResponse
+    OfferResponse:
+      type: object
+      properties:
+        messages: 
+          type: array
+          items:
+            $ref: '../common/nova-common.yaml#/components/schemas/Message'
+          minItems: 0
+
+    

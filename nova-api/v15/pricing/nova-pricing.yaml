@@ -15,7 +15,7 @@ info:
 
 paths:
   # PricingService
-  /nova/v15/pricing/offers/conncetion-offers:
+  /nova/v15/pricing/offers/connection-offers:
     post:
       operationId: createConnectionOffers
       responses:

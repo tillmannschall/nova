@@ -34,6 +34,8 @@ components:
         messageID: 
           type: integer
           format: int32
+        messageType: 
+          $ref: '#/components/schemas/MessageType'
       required:
         - messageID
     # ch.voev.nova.services.nova.v15.common.LocalizedString
@@ -50,3 +52,11 @@ components:
           type: string
 
     
+    # ch.voev.nova.services.nova.v15.common.MessageType
+    MessageType:
+      type: string
+      enum:
+        - INFO
+        - WARNING
+        - ERROR
+

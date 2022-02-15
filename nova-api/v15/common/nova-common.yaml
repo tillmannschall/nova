@@ -3,12 +3,14 @@ openapi: 3.0.0
 info:
   title: NOVA 15 Common
   version: 0.0.1-SNAPSHOT
-  description: |
+  description: >-
+    OpenAPI specification contains all those types that are valid for multiple REST resources of NOVA.
     
+    Please be aware that this specfication does not offer any operations but is a pure source basic data types.
   contact:
     name: NOVA Development Team
     url: 'https://tillmannschall.github.io/nova/'
-    email: noav@sbb.ch
+    email: nova@sbb.ch
   license:
     name: Apache 2.0
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
@@ -27,6 +29,10 @@ components:
   schemas:
     # ch.voev.nova.services.nova.v15.common.Message
     Message:
+      description: >-
+        Type represents a message that can be returned by any NOVA REST resource. The message contains a literal description as well as a message ID that can be used to identify the message.
+        
+         Please be aware that depending on the message not localizations for all languages will be provided.
       type: object
       properties:
         messageText: 
@@ -54,6 +60,8 @@ components:
     
     # ch.voev.nova.services.nova.v15.common.MessageType
     MessageType:
+      description: >-
+        Enumeration defines the possible types of messages that can be returned from calls to NOVA REST resources.
       type: string
       enum:
         - INFO

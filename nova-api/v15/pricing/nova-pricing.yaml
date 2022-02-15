@@ -15,7 +15,7 @@ info:
 
 paths:
   # PricingService
-  nova/v15/pricing/offers/conncetions:
+  /nova/v15/pricing/offers/conncetion-offers:
     post:
       operationId: createConnectionOffers
       responses:
@@ -27,7 +27,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OfferResponse'
           
-  nova/v15/pricing/offers/trip-search:
+  /nova/v15/pricing/offers/trip-search-offers:
     post:
       operationId: createTripSearchOffers
       responses:
@@ -39,7 +39,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OfferResponse'
           
-  nova/v15/pricing/offers/interval-search:
+  /nova/v15/pricing/offers/interval-search-offers:
     post:
       operationId: createIntervalSearchOffers
       responses:

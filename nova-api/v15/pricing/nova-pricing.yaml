@@ -55,29 +55,6 @@ paths:
 
 components:
   schemas:
-    # ch.voev.nova.services.nova.v15.common.Message
-    Message:
-      type: object
-      properties:
-        messageText: 
-          $ref: '../common/nova-common.yaml#/components/schemas/LocalizedString'
-        messageID: 
-          type: integer
-          format: int32
-      required:
-        - messageID
-    # ch.voev.nova.services.nova.v15.common.LocalizedString
-    LocalizedString:
-      type: object
-      properties:
-        valueDE: 
-          type: string
-        valueFR: 
-          type: string
-        valueIT: 
-          type: string
-        valueEN: 
-          type: string
     # ch.voev.nova.services.nova.v15.pricing.OfferResponse
     OfferResponse:
       type: object

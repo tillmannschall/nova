@@ -35,27 +35,31 @@ components:
          Please be aware that depending on the message not localizations for all languages will be provided.
       type: object
       properties:
-        messageText: 
-          $ref: '#/components/schemas/LocalizedString'
         messageID: 
           type: integer
           format: int32
+          readOnly: true
         messageType: 
           $ref: '#/components/schemas/MessageType'
+        localizations: 
+          type: array
+          items:
+            $ref: '#/components/schemas/LocalizedText'
+          minItems: 0
+        defaultText: 
+          $ref: '#/components/schemas/LocalizedText'
       required:
         - messageID
-    # ch.voev.nova.services.nova.v15.common.LocalizedString
-    LocalizedString:
+    # ch.voev.nova.services.nova.v15.common.LocalizedText
+    LocalizedText:
       type: object
       properties:
-        valueDE: 
+        text: 
           type: string
-        valueFR: 
+          readOnly: true
+        language: 
           type: string
-        valueIT: 
-          type: string
-        valueEN: 
-          type: string
+          readOnly: true
 
     
     # ch.voev.nova.services.nova.v15.common.MessageType

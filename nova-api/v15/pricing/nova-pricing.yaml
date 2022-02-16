@@ -24,6 +24,35 @@ paths:
   /nova/v15/pricing/offers/connection-offers:
     post:
       operationId: createConnectionOffers
+      parameters:
+        - name: X-Conversation-Id
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: traceId
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: spanId
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: authorization
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
       responses:
         '200':
           description: >- 

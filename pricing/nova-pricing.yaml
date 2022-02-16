@@ -1,0 +1,117 @@
+openapi: 3.0.0
+
+servers:
+  - url: https://demo-nova.sbb.ch
+  - url: https://test-nova.sbb.ch
+  - url: https://inte-nova.sbb.ch
+    description: >- 
+      NOVA Pricing INTE environment can be used for any kind of test purposes. It's is working with current production master data.
+  - url: https://nova.sbb.ch
+
+info:
+  title: NOVA v15 Pricing
+  version: 0.0.1-SNAPSHOT
+  contact:
+    name: NOVA Development Team
+    url: 'https://tillmannschall.github.io/nova/'
+    email: nova@sbb.ch
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+
+paths:
+  # PricingService
+  /nova/v15/pricing/offers/connection-offers:
+    post:
+      operationId: createConnectionOffers
+      parameters:
+        - name: tkid
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: X-Conversation-Id
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: traceId
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: spanId
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: authorization
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+        - name: Accept-Language
+          in: header
+          description: >- 
+            TODO Please add comment
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: >- 
+            TODO Please add comment
+          content:  
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfferResponse'
+          
+  /nova/v15/pricing/offers/trip-search-offers:
+    post:
+      operationId: createTripSearchOffers
+      responses:
+        '200':
+          description: >- 
+            TODO Please add comment
+          content:  
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfferResponse'
+          
+  /nova/v15/pricing/offers/interval-search-offers:
+    post:
+      operationId: createIntervalSearchOffers
+      responses:
+        '200':
+          description: >- 
+            TODO Please add comment
+          content:  
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OfferResponse'
+          
+
+
+components:
+  schemas:
+    # ch.voev.nova.services.nova.v15.pricing.OfferResponse
+    OfferResponse:
+      type: object
+      properties:
+        messages: 
+          type: array
+          items:
+            $ref: '../common/nova-common.yaml#/components/schemas/Message'
+          minItems: 0
+
+    

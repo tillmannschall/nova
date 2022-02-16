@@ -28,8 +28,7 @@
 	</scm>
 
 	<properties>
-		<headerCompany>Schweizerische Bundesbahnen SBB, Hilfikerstrasse 1,
-			3000 Bern 65, Switzerland</headerCompany>
+		<headerCompany>Schweizerische Bundesbahnen SBB, Hilfikerstrasse 1, 3000 Bern 65, Switzerland</headerCompany>
 		<headerAuthor>NOVA Development Team</headerAuthor>
 		<headerCopyright>Copyright 2022. All rights reserved.</headerCopyright>
 		<headerVersion>NOVA Release 15.x</headerVersion>
@@ -88,7 +87,7 @@
 				                    <outputDirectory>${project.build.directory}/staging/</outputDirectory>
 				                </artifactItem>
 			                </artifactItems>
-			                <includes>META-INF/**</includes>
+			                <includes>version.txt</includes>
 			            </configuration>
 			        </execution>
 			    </executions>

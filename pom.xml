@@ -88,7 +88,7 @@
 				                    <outputDirectory>${project.build.directory}/staging/</outputDirectory>
 				                </artifactItem>
 			                </artifactItems>
-			                <includes>META-INF/JEAF/**</includes>
+			                <includes>META-INF/**</includes>
 			            </configuration>
 			        </execution>
 			    </executions>

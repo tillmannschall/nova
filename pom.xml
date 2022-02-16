@@ -56,7 +56,7 @@
 			    <artifactId>maven-dependency-plugin</artifactId>
 			    <executions>
 			        <execution>
-			            <id>resource-dependencies</id>
+			            <id>unpack-openapi</id>
 			            <phase>compile</phase>
 			            <goals>
 			                <goal>unpack</goal>
@@ -71,6 +71,24 @@
 				                </artifactItem>
 			                </artifactItems>
 			                <excludes>META-INF/**</excludes>
+			            </configuration>
+			        </execution>
+			        <execution>
+			            <id>unpack-versioninfo</id>
+			            <phase>compile</phase>
+			            <goals>
+			                <goal>unpack</goal>
+			            </goals>
+			            <configuration>
+			                <artifactItems>
+				                <artifactItem>
+									<groupId>ch.voev.nova.api</groupId>
+									<artifactId>nova-api-openapi</artifactId>
+				                    <overWrite>true</overWrite>
+				                    <outputDirectory>${project.build.directory}/staging/</outputDirectory>
+				                </artifactItem>
+			                </artifactItems>
+			                <includes>META-INF/JEAF/**</includes>
 			            </configuration>
 			        </execution>
 			    </executions>

@@ -1,13 +1,15 @@
 openapi: 3.0.0
 
 servers:
+  - url: https://demo-nova.sbb.ch
+  - url: https://test-nova.sbb.ch
   - url: https://inte-nova.sbb.ch
     description: >- 
       NOVA Pricing INTE environment can be used for any kind of test purposes. It's is working with current production master data.
-  - url: https://test-nova.sbb.ch
+  - url: https://nova.sbb.ch
 
 info:
-  title: NOVA 15 Pricing
+  title: NOVA v15 Pricing
   version: 0.0.1-SNAPSHOT
   contact:
     name: NOVA Development Team

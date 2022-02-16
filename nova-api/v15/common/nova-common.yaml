@@ -1,7 +1,7 @@
 openapi: 3.0.0
 
 info:
-  title: NOVA 15 Common
+  title: NOVA v15 Common
   version: 0.0.1-SNAPSHOT
   description: >-
     OpenAPI specification contains all those types that are valid for multiple REST resources of NOVA.

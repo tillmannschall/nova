@@ -25,13 +25,6 @@ paths:
     post:
       operationId: createConnectionOffers
       parameters:
-        - name: tkid
-          in: header
-          description: >- 
-            TODO Please add comment
-          required: false
-          schema:
-            type: string
         - name: X-Conversation-Id
           in: header
           description: >- 
@@ -54,13 +47,6 @@ paths:
           schema:
             type: string
         - name: authorization
-          in: header
-          description: >- 
-            TODO Please add comment
-          required: false
-          schema:
-            type: string
-        - name: Accept-Language
           in: header
           description: >- 
             TODO Please add comment

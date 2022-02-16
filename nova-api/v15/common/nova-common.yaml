@@ -16,7 +16,7 @@ info:
     url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
 
 paths:
-  # OpenAPI standard requires to define at least 1 operation. This API however seems to be a pure type definition. 
+  # OpenAPI standard requires to define at least 1 operation. This API however seems to be a pure type definition.
   # So we define NOP operation here as workaround.
   /nop:
     get:

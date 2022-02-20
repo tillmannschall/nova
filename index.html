@@ -39,11 +39,9 @@
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-        urls: [
-          {url: "./nova/v15/common/nova-common.yaml", name: "NOVA Common v15"}, 
-          {url: "./nova/v15/pricing/nova-pricing.yaml", name: "NOVA Pricing v15"} 
-        ],
+        url: "swagger.yaml",
         dom_id: '#swagger-ui',
+        deepLinking: true,
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
@@ -51,12 +49,12 @@
         plugins: [
           SwaggerUIBundle.plugins.DownloadUrl
         ],
-        layout: "StandaloneLayout"        
-      })
+        layout: "StandaloneLayout"
+      });
       // End Swagger UI call region
 
-      window.ui = ui
-    }
+      window.ui = ui;
+    };
   </script>
   </body>
 </html>

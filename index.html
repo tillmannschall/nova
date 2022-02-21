@@ -39,7 +39,10 @@
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-        url: "swagger.yaml",
+        urls: [
+          {url: "./nova/v15/common/nova-common.yaml", name: "NOVA Common v15"}, 
+          {url: "./nova/v15/pricing/nova-pricing.yaml", name: "NOVA Pricing v15"} 
+        ],
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
